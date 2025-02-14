@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="login-container">
+        <h2>Login to Chatroom</h2>
+        <div id="login-form">
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-container" style="display: none;">
+        <h2>Sign Up</h2>
+        <div id="signup-form">
+            <input type="text" id="new-username" placeholder="Username" required />
+            <input type="password" id="new-password" placeholder="Password" required />
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Chatroom -->
+    <div id="chatroom-container" style="display: none;">
+        <div id="chatroom">
+            <h2>Welcome to the Chatroom!</h2>
+            <div id="messages"></div>
+            <input type="text" id="message" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Link to your JavaScript -->
+</body>
+</html>
